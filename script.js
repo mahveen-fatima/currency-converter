@@ -207,10 +207,10 @@ const getExchangedRate = async () => {
     const data = await response.json();
     console.log(data);
 
-    const converionRate = data.rates[toCurrency];
-    const convertedAmount = (amount * converionRate).toFixed(2);
+    const conversionRate = data.rates[toCurrency];
+    const convertedAmount = (amount * conversionRate).toFixed(2);
 
-    if(typeof converionRate === "undefined") {
+    if(typeof conversionRate === "undefined") {
         resultElement.textContent = "Exchange rate data is not available for selected countries."
         convertedAmountElement = "";
     } else {
